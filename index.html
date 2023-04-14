@@ -37,21 +37,17 @@
     <div id="mydiv"></div>
 
     <script type="text/babel">
-     class Car {
-      constructor() {
-        this.brand = "Ford";
-      }
-      
-      render(){
-        return({this.present});
+    class Car {
+      constructor(name) {
+        this.brand = name;
       }
 
-      present() {
-        return 'I have a ' + this.brand;
+      render() {
+        return '<div {{style="color:red;"}}>I have a ' + this.brand + '</div>';
       }
     }
 
-      ReactDOM.render(<Car />, document.getElementById('mydiv'))
+    ReactDOM.render(<Car brand="Ford" />, document.getElementById('mydiv'));
     </script>
 
   </body>
